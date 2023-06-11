@@ -1,16 +1,16 @@
 # Challenge requirement
 
-![Project Image](project-image-url)
+![Project Image](https://editor.analyticsvidhya.com/uploads/76889recommender-system-for-movie-recommendation.jpg)
 
 > Building a Movie Recommendation System using Microservices.
 
 ---
 
-### Specification
+### Menu
 - [Description](#description)
-- [Timeline](#Timeline)
-- [References](#references)
-- [License](#license)
+- [Timeline](#timeline)
+- [Critères](#critères)
+- [DeadLine](#deadline)
 - [Author Info](#author-info)
 
 ---
@@ -40,36 +40,36 @@ You are also required to develop a front-end application that will allow users t
 
 ## Timeline:
 - Day 1:
-o Set up the project structure using Spring Initializr and create the microservices
-using Spring Boot
-o Set up the front-end project using Angular
+Set up the project structure using Spring Initializr and create the microservices
+using Spring Boot.
+Set up the front-end project using Angular.
 - Day 2:
-o Implement user registration and login functionality in the front-end
-o Implement basic CRUD operations for the user microservice
+Implement user registration and login functionality in the front-end.
+Implement basic CRUD operations for the user microservice.
 - Day 3:
-o Implement the REST APIs for the user microservice
-o Implement basic CRUD operations for the movie microservice
+Implement the REST APIs for the user microservice.
+Implement basic CRUD operations for the movie microservice.
 - Day 4:
-o Implement the REST APIs for the movie microservice
-o Implement movie browsing and searching functionality in the front-end
+Implement the REST APIs for the movie microservice.
+Implement movie browsing and searching functionality in the front-end.
 - Day 5:
-o Implement movie rating and review functionality in the front-end
-o Implement the recommendation algorithm in the recommendation microservice
+Implement movie rating and review functionality in the front-end.
+Implement the recommendation algorithm in the recommendation microservice.
 - Day 6:
-o Integrate the recommendation microservice with the other microservices
-o Implement movie recommendation functionality in the front-end
+Integrate the recommendation microservice with the other microservices.
+Implement movie recommendation functionality in the front-end.
 - Day 7:
-o Test and debug the application
-o Final testing and debugging
-o Deploy the application to a cloud provider (e.g. AWS, Azure, Google Cloud)
-and test again
+Test and debug the application.
+Final testing and debugging.
+Deploy the application to a cloud provider (e.g. AWS, Azure, Google Cloud)
+and test again.
 
-#### Critères
--Completeness (5 points): Did both of you complete all the required features and
+## Critères
+- Completeness (5 points): Did both of you complete all the required features and
 functionalities for each microservice? Were all endpoints and functions implemented
 and working correctly?
 Implement all microservices in demand
- -Quality of code (5 points): Did both of you write clean, well-organized code that
+- Quality of code (5 points): Did both of you write clean, well-organized code that
 follows best practices and is easy to read and maintain? Was the code reviewed and
 tested to ensure its correctness and robustness?
 - User Experience (5 points): Was the user interface intuitive and easy to use? Did the
@@ -77,36 +77,13 @@ application provide sufficient feedback and guidance to users? Were error messag
 clear and helpful?
 - Creativity and Innovation (2 points): Did either of you come up with unique or clever
 solutions to any of the challenges faced during development?
-
-
-## References
 [Back To The Top](#read-me-template)
 
 ---
 
-## License
+## DeadLine
+1/7/2023
 
-MIT License
-
-Copyright (c) [2017] [James Q Quick]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 
 [Back To The Top](#read-me-template)
 
@@ -114,7 +91,6 @@ SOFTWARE.
 
 ## Author Info
 
-- Twitter - [@jamesqquick](https://twitter.com/jamesqquick)
-- Website - [James Q Quick](https://jamesqquick.com)
+- Linkdin - [@rida_bahni](https://www.linkedin.com/in/rida-bahni-303b73184)
 
 [Back To The Top](#read-me-template)
