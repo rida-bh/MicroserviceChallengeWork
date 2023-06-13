@@ -24,8 +24,12 @@ public class AuthConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf().disable()
+                .httpBasic().disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/auth/register", "/auth/token", "/auth/validate","/h2-console/**").permitAll()
+                .requestMatchers("/auth/register", "/auth/token", "/auth/validate").permitAll()
+                .requestMatchers("/h2-console/**").permitAll()
+                .and()
+                .headers().frameOptions().disable()
                 .and()
                 .build();
     }
