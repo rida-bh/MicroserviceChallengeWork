@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AllMoviesComponent } from './components/all-movies/all-movies.component';
 import { MoviesDetailsComponent } from './components/movies-details/movies-details.component';
-import { TicketSearchComponent } from './components/ticket-search/ticket-search.component';
+
 import {FilterBySectionComponent} from "./components/filter-by-section/filter-by-section.component";
 import { AllMoviesNavbarComponent } from './components/all-movies-navbar/all-movies-navbar.component';
+import {TicketSearchComponent} from "../../shared/components/ticket-search/ticket-search.component";
 
 
 
@@ -23,7 +24,7 @@ import { AllMoviesNavbarComponent } from './components/all-movies-navbar/all-mov
     AllMoviesComponent
   ],
     imports: [
-        CommonModule
+        CommonModule,
     ]
 })
 export class MoviesModule { }

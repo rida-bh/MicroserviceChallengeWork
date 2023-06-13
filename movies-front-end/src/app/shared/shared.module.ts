@@ -4,6 +4,7 @@ import {HeaderComponent} from "./components/header/header.component";
 import { BannerComponent } from './components/banner/banner.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PreLoaderComponent } from './components/pre-loader/pre-loader.component';
+import {RouterModule} from "@angular/router";
 
 
 
@@ -13,9 +14,10 @@ import { PreLoaderComponent } from './components/pre-loader/pre-loader.component
     BannerComponent,
     FooterComponent,
     PreLoaderComponent],
-  imports: [
-    CommonModule
-  ],
+    imports: [
+        CommonModule,
+        RouterModule
+    ],
     exports: [
         HeaderComponent,
         BannerComponent,

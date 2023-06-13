@@ -6,17 +6,23 @@ import { HomeRoutingModule } from './home-routing.module';
 import { AboutUsPageComponent } from './about-us/components/about-us-page/about-us-page.component';
 import { ContactPageComponent } from './contact/components/contact-page/contact-page.component';
 import {HomePageComponent} from "./home/components/home-page/home-page.component";
+import {
+  MovieRecommendationSectionComponent
+} from "./home/components/movie-recommendation-section/movie-recommendation-section.component";
+import {MoviesModule} from "./movies/movies.module";
 
 
 @NgModule({
   declarations: [
     HomePageComponent,
     AboutUsPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    MovieRecommendationSectionComponent
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    MoviesModule
   ]
 })
 export class HomeModule { }
