@@ -9,6 +9,7 @@ import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component
 import { MoviesPageComponent } from './home/movies/components/movies-page/movies-page.component';
 import {MoviesModule} from "./home/movies/movies.module";
 import { MoviesSectionComponent } from './home/movies/components/movies-section/movies-section.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { MoviesSectionComponent } from './home/movies/components/movies-section/
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     SharedModule,
     MoviesModule,
   ],

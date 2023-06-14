@@ -1,34 +1,45 @@
 <div class="tab-area">
   <div class="tab-item active">
     <div class="row mb-10 justify-content-center">
-      <div class="col-sm-6 col-lg-4">
-        <div class="movie-grid">
-          <div class="movie-thumb c-thumb">
-            <a href="movie-details.html">
-              <img src="./assets/images/movie/movie01.jpg" alt="movie">
-            </a>
-          </div>
-          <div class="movie-content bg-one">
-            <h5 class="title m-0">
-              <a href="movie-details.html">alone</a>
-            </h5>
-            <ul class="movie-rating-percent">
-              <li>
-                <div class="thumb">
-                  <img src="./assets/images/movie/tomato.png" alt="movie">
-                </div>
-                <span class="content">88%</span>
-              </li>
-              <li>
-                <div class="thumb">
-                  <img src="./assets/images/movie/cake.png" alt="movie">
-                </div>
-                <span class="content">88%</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        <ng-container *ngIf="(moviesInput$ | async) as result" [ngSwitch]="result.dataState">
+          <ng-container *ngSwitchCase="DataStateEnum.LOADING">
+          </ng-container>
+          <ng-container *ngSwitchCase="DataStateEnum.ERROR">
+            <div class="alert alert-danger" role="alert">
+              {{result.errMessage}}
+            </div>
+          </ng-container>
+          <ng-container *ngSwitchCase="DataStateEnum.LOADED">
+            <div class="col-sm-6 col-lg-4" *ngFor="let movie of result.data?.movies">
+            <div class="movie-grid" >
+              <div class="movie-thumb c-thumb">
+                <a href="movie-details.html">
+                  <img src="{{movie.posterUrl}}" alt="movie">
+                </a>
+              </div>
+              <div class="movie-content bg-one">
+                <h5 class="title m-0">
+                  <a href="movie-details.html">{{movie.title}}</a>
+                </h5>
+                <ul class="movie-rating-percent">
+                  <li>
+                    <div class="thumb">
+                      <img src="./assets/images/movie/tomato.png" alt="movie">
+                    </div>
+                    <span class="content">88%</span>
+                  </li>
+                  <li>
+                    <div class="thumb">
+                      <img src="./assets/images/movie/cake.png" alt="movie">
+                    </div>
+                    <span class="content">88%</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            </div>
+          </ng-container>
+        </ng-container>
     </div>
   </div>
   <div class="tab-item">
