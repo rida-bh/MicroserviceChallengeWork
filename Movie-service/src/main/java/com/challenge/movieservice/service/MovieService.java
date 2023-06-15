@@ -1,9 +1,12 @@
 package com.challenge.movieservice.service;
 
+import com.challenge.movieservice.dto.Movie.MovieDTO;
 import com.challenge.movieservice.dto.Movie.MoviePageDTO;
 
 public interface MovieService {
     MoviePageDTO ShowMovies(int page, int size);
+
+    MovieDTO getMovie(Long id);
     /*MovieSaveDTO AddMovie(MovieSaveDTO hotelSaveDTO);
     MovieSaveDTO UpdateMovie(Long Id, MovieSaveDTO hotelSaveDTO);
     void DeleteMovie(Long Id);

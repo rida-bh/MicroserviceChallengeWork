@@ -26,6 +26,7 @@ import {HttpClientModule} from "@angular/common/http";
     HttpClientModule,
     SharedModule,
     MoviesModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

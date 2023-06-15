@@ -6,6 +6,10 @@ import { MoviesDetailsComponent } from './components/movies-details/movies-detai
 import {FilterBySectionComponent} from "./components/filter-by-section/filter-by-section.component";
 import { AllMoviesNavbarComponent } from './components/all-movies-navbar/all-movies-navbar.component';
 import {TicketSearchComponent} from "../../shared/components/ticket-search/ticket-search.component";
+import {SharedModule} from "../../shared/shared.module";
+import { LanguageSectionComponent } from './components/filter-by-section/language-section/language-section.component';
+import { ExperienceSectionComponent } from './components/filter-by-section/experience-section/experience-section.component';
+import { GenreSectionComponent } from './components/filter-by-section/genre-section/genre-section.component';
 
 
 
@@ -15,7 +19,10 @@ import {TicketSearchComponent} from "../../shared/components/ticket-search/ticke
         MoviesDetailsComponent,
         TicketSearchComponent,
         FilterBySectionComponent,
-        AllMoviesNavbarComponent
+        AllMoviesNavbarComponent,
+        LanguageSectionComponent,
+        ExperienceSectionComponent,
+        GenreSectionComponent
     ],
   exports: [
     TicketSearchComponent,
@@ -23,8 +30,9 @@ import {TicketSearchComponent} from "../../shared/components/ticket-search/ticke
     AllMoviesNavbarComponent,
     AllMoviesComponent
   ],
-    imports: [
-        CommonModule,
-    ]
+  imports: [
+    CommonModule,
+    SharedModule,
+  ]
 })
 export class MoviesModule { }

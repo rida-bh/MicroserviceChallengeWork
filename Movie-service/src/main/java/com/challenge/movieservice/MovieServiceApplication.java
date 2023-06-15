@@ -24,7 +24,7 @@ public class MovieServiceApplication {
 							RatingRepository ratingRepository){
 
 		return args -> {
-			/*Stream.of("English","Spanish","Mandarin","Chinese","Hindi","Arabic","Portuguese","Bengali","Russian","Japanese","Punjabi","German","Javanese","French","Telugu","Vietnamese","Korean","Tamil","Italian","Marathi","Turkish").forEach(name->{
+			Stream.of("English","Spanish","Mandarin","Chinese","Hindi","Arabic","Portuguese","Bengali","Russian","Japanese","Punjabi","German","Javanese","French","Telugu","Vietnamese","Korean","Tamil","Italian","Marathi","Turkish").forEach(name->{
 				Language language =new Language();
 				language.setName(name);
 				languageRepository.save(language);
@@ -41,6 +41,7 @@ public class MovieServiceApplication {
 			});
 			Movie movie =new Movie();
 			movie.setTitle("Avatar");
+			movie.setPosterUrl("./assets/images/movie/movie01.jpg");
 			movie.setDescription("A paraplegic Marine is dispatched to the moon Pandora on a unique mission.");
 			movie.setDurationInMin(162);
 			movie.setCountry("United States");
@@ -54,18 +55,34 @@ public class MovieServiceApplication {
 			movieRepository.save(movie);
 
 			Movie movie2 =new Movie();
-			movie.setTitle("Coco");
-			movie.setDescription("A young boy named Miguel embarks on a journey to the Land of the Dead to unlock the true story of his family history.");
-			movie.setDurationInMin(105);
-			movie.setCountry("United States");
-			movie.setReleaseDate(new Date());
+			movie2.setTitle("Coco");
+			movie2.setPosterUrl("./assets/images/movie/movie02.jpg");
+			movie2.setDescription("A young boy named Miguel embarks on a journey to the Land of the Dead to unlock the true story of his family history.");
+			movie2.setDurationInMin(105);
+			movie2.setCountry("United States");
+			movie2.setReleaseDate(new Date());
 			Type type2=typeRepository.findById(2L).get();
-			movie.setType(type2);
+			movie2.setType(type2);
 			Experience experience2 =experienceRepository.findById(2L).get();
-			movie.setExperience(experience2);
+			movie2.setExperience(experience2);
 			Language language2 =languageRepository.findById(2L).get();
-			movie.setLanguage(language2);
-			movieRepository.save(movie2);*/
+			movie2.setLanguage(language2);
+			movieRepository.save(movie2);
+
+			Movie movie3 =new Movie();
+			movie3.setTitle("Dangal");
+			movie3.setPosterUrl("./assets/images/movie/movie03.jpg");
+			movie3.setDescription("A former wrestler trains his two daughters to become world-class wrestlers against societal odds.");
+			movie3.setDurationInMin(161);
+			movie3.setCountry("India");
+			movie3.setReleaseDate(new Date());
+			Type type3=typeRepository.findById(3L).get();
+			movie3.setType(type3);
+			Experience experience3 =experienceRepository.findById(16L).get();
+			movie3.setExperience(experience3);
+			Language language3 =languageRepository.findById(5L).get();
+			movie3.setLanguage(language3);
+			movieRepository.save(movie3);
 		};
 	}
 }

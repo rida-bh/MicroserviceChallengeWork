@@ -4,6 +4,7 @@ import {HomePageComponent} from "./home/components/home-page/home-page.component
 import {AboutUsPageComponent} from "./about-us/components/about-us-page/about-us-page.component";
 import {ContactPageComponent} from "./contact/components/contact-page/contact-page.component";
 import {MoviesPageComponent} from "./movies/components/movies-page/movies-page.component";
+import {MoviesDetailsComponent} from "./movies/components/movies-details/movies-details.component";
 
 
 const routes: Routes = [
@@ -34,6 +35,16 @@ const routes: Routes = [
       {
         path:'contact-page',
         component:ContactPageComponent
+      }
+    ]
+  },
+  {
+    path:'',
+    component:MoviesDetailsComponent,
+    children:[
+      {
+        path:'movie/:id',
+        component:MoviesDetailsComponent
       }
     ]
   },

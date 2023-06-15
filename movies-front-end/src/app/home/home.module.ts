@@ -10,6 +10,7 @@ import {
   MovieRecommendationSectionComponent
 } from "./home/components/movie-recommendation-section/movie-recommendation-section.component";
 import {MoviesModule} from "./movies/movies.module";
+import {SharedModule} from "../shared/shared.module";
 
 
 @NgModule({
@@ -19,10 +20,11 @@ import {MoviesModule} from "./movies/movies.module";
     ContactPageComponent,
     MovieRecommendationSectionComponent
   ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    MoviesModule
-  ]
+    imports: [
+        CommonModule,
+        HomeRoutingModule,
+        MoviesModule,
+        SharedModule
+    ]
 })
 export class HomeModule { }

@@ -7,5 +7,5 @@ import org.springframework.stereotype.Service;
 @Service
 @Slf4j
 @AllArgsConstructor
-public class TypeServiceImp implements MovieService{
+public class TypeServiceImp implements TypeService{
 }

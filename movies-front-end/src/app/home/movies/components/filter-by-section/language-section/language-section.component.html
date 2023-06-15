@@ -1,0 +1,19 @@
+<!-- language-section.component.html -->
+<h6 class="subtitle">Language</h6>
+<ng-container *ngIf="(languageInput$ | async) as result ;else elseBlock" [ngSwitch]="result.dataState">
+  <!-- ...existing code... -->
+  <ng-container *ngSwitchCase="DataStateEnum.LOADED">
+    <div class="check-area">
+      <div class="form-group" *ngFor="let language of (result.data | slice:0:displayCount)">
+        <input type="checkbox" name="lang" [id]="language.idLanguage"><label [for]="language.idLanguage">{{ language.name }}</label>
+      </div>
+    </div>
+    <div class="add-check-area" *ngIf="result.data && result.data.length > displayCount">
+      <a (click)="showMore()">view more <i class="plus"></i></a>
+      <a (click)="showLess()" *ngIf="displayCount > defaultDisplayCount">show less <i class="minus"></i></a>
+    </div>
+  </ng-container>
+</ng-container>
+<ng-template #elseBlock>
+  nothing to show.
+</ng-template>

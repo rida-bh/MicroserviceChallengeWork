@@ -12,6 +12,8 @@ import {MoviesService} from "../../services/movies.service";
 export class AllMoviesComponent {
   moviesInput$ :Observable <AppDataState<MovieResponse>>|null =null;
   readonly DataStateEnum=dataStateEnum;
+  isListView: boolean = true;
+  isGridView: boolean = false;
   currentPage:number =0;
   pageSize:number =9;
   constructor(private moviesService:MoviesService) {
@@ -27,4 +29,29 @@ export class AllMoviesComponent {
       catchError(err=>of({dataState: dataStateEnum.ERROR , errMessage:err.message}))
     );
   }
+  showListView() {
+    this.isListView = true;
+    this.isGridView = false;
+  }
+
+  showGridView() {
+    this.isListView = false;
+    this.isGridView = true;
+  }
+  gotoPage(page:number) {
+    this.currentPage=page;
+    this.ShowMovies(this.currentPage,this.pageSize);
+  }
+
+  next() {
+    this.currentPage++;
+   this.ShowMovies(this.currentPage,this.pageSize);
+  }
+
+  previous() {
+    this.currentPage--;
+    this.ShowMovies(this.currentPage,this.pageSize);
+
+  }
+
 }

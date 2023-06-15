@@ -1,7 +1,9 @@
 package com.challenge.movieservice.dto.Movie;
 
-import com.challenge.movieservice.entities.Movie;
+
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
@@ -10,5 +12,5 @@ public class MoviePageDTO {
     private int currentPage;
     private int totalPages;
     private int pageSize;
-    private List<Movie> movies;
+    private List<MovieDTO> movies;
 }

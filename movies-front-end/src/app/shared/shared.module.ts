@@ -18,10 +18,11 @@ import {RouterModule} from "@angular/router";
         CommonModule,
         RouterModule
     ],
-    exports: [
-        HeaderComponent,
-        BannerComponent,
-        FooterComponent
-    ]
+  exports: [
+    HeaderComponent,
+    BannerComponent,
+    FooterComponent,
+    PreLoaderComponent
+  ]
 })
 export class SharedModule { }
