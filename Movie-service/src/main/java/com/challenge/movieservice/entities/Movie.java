@@ -21,13 +21,13 @@ public class Movie {
     private int durationInMin;
     private Date releaseDate;
     private String country;
+    private float ratingValue;
     @ManyToOne
     private Experience experience;
     @ManyToOne
     private Type type;
     @ManyToOne
     private Language language;
-    @OneToMany(mappedBy = "movie")
-    private List<Rating> ratings;
+
 
 }

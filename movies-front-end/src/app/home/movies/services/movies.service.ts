@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Experience, Language, MovieResponse, Type} from "../../../models/models.service";
+import {Experience, Language, Movie, MovieResponse, Type} from "../../../models/models.service";
 import {environment} from "../../../environments/environment";
 
 @Injectable({
@@ -24,5 +24,10 @@ export class MoviesService {
   getTypes() {
     let host =environment.host;
     return this.http.get<Type[]>(host+"/types");
+  }
+
+  getMovie(idmovie: number) {
+    let host =environment.host;
+    return this.http.get<Movie>(host+"/movie/"+idmovie);
   }
 }

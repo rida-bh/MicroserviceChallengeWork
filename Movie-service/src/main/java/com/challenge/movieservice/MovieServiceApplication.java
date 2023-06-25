@@ -21,7 +21,7 @@ public class MovieServiceApplication {
 							LanguageRepository languageRepository,
 							ExperienceRepository experienceRepository,
 							TypeRepository typeRepository,
-							RatingRepository ratingRepository){
+							){
 
 		return args -> {
 			Stream.of("English","Spanish","Mandarin","Chinese","Hindi","Arabic","Portuguese","Bengali","Russian","Japanese","Punjabi","German","Javanese","French","Telugu","Vietnamese","Korean","Tamil","Italian","Marathi","Turkish").forEach(name->{

@@ -7,9 +7,8 @@ import {FilterBySectionComponent} from "./components/filter-by-section/filter-by
 import { AllMoviesNavbarComponent } from './components/all-movies-navbar/all-movies-navbar.component';
 import {TicketSearchComponent} from "../../shared/components/ticket-search/ticket-search.component";
 import {SharedModule} from "../../shared/shared.module";
-import { LanguageSectionComponent } from './components/filter-by-section/language-section/language-section.component';
-import { ExperienceSectionComponent } from './components/filter-by-section/experience-section/experience-section.component';
-import { GenreSectionComponent } from './components/filter-by-section/genre-section/genre-section.component';
+import {FormsModule} from "@angular/forms";
+import {RouterModule} from "@angular/router";
 
 
 
@@ -20,9 +19,6 @@ import { GenreSectionComponent } from './components/filter-by-section/genre-sect
         TicketSearchComponent,
         FilterBySectionComponent,
         AllMoviesNavbarComponent,
-        LanguageSectionComponent,
-        ExperienceSectionComponent,
-        GenreSectionComponent
     ],
   exports: [
     TicketSearchComponent,
@@ -33,6 +29,8 @@ import { GenreSectionComponent } from './components/filter-by-section/genre-sect
   imports: [
     CommonModule,
     SharedModule,
+    FormsModule,
+    RouterModule,
   ]
 })
 export class MoviesModule { }

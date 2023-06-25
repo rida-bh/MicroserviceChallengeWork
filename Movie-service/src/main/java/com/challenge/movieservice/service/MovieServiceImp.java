@@ -32,4 +32,5 @@ public class MovieServiceImp implements MovieService{
     public MovieDTO getMovie(Long id) {
         return movieMapper.fromMovie(movieRepository.findById(id).orElseThrow());
     }
+
 }

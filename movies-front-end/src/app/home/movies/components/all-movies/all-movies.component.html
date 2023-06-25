@@ -65,7 +65,7 @@
         <div class="movie-area mb-10" >
           <div class="movie-list" *ngFor="let movie of result.data?.movies">
             <div class="movie-thumb c-thumb">
-              <a href="movie-details.html" class="w-100 bg_img h-100" >
+              <a routerLink="/movie/{{movie.idMovie}}" class="w-100 bg_img h-100" >
                 <img  src="{{movie.posterUrl}}" alt="movie">
               </a>
             </div>

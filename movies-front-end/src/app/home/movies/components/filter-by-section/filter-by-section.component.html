@@ -1,18 +1,85 @@
 <div class="widget-1 widget-check">
   <div class="widget-header">
-    <h5 class="m-title">Filter By</h5> <a href="#0" class="clear-check">Clear All</a>
+    <h5 class="m-title">Filter By</h5> <a (click)="clearAll()" class="clear-check">Clear All</a>
   </div>
   <div class="widget-1-body">
-    <app-language-section></app-language-section>
+    <h6 class="subtitle">Language</h6>
+    <ng-container *ngIf="(languageInput$ | async) as result ;else elseBlock" [ngSwitch]="result.dataState">
+      <ng-container *ngSwitchCase="DataStateEnum.LOADING">
+        <div class="d-flex justify-content-center">
+          <div class="spinner-border " style="width: 3em; height: 3em;margin: 200px" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngSwitchCase="DataStateEnum.ERROR">
+        <div class="alert alert-danger" role="alert">
+          {{result.errMessage}}
+        </div>
+      </ng-container>
+      <ng-container *ngSwitchCase="DataStateEnum.LOADED">
+        <div class="check-area" [style.max-height.px]="300" style="overflow-y: auto;">
+          <div class="form-group" *ngFor="let language of result.data">
+            <input type="checkbox"  name="lang" id="lang{{language.idLanguage}}"><label for="lang{{language.idLanguage}}">{{ language.name }}</label>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+    <ng-template #elseBlock>
+      nothing to show.
+    </ng-template>
   </div>
 </div>
 <div class="widget-1 widget-check">
   <div class="widget-1-body">
-      <app-experience-section></app-experience-section>
+    <h6 class="subtitle">experience</h6>
+    <ng-container *ngIf="(experienceInput$ | async) as result ;else elseBlock" [ngSwitch]="result.dataState">
+      <ng-container *ngSwitchCase="DataStateEnum.LOADING">
+        <div class="d-flex justify-content-center">
+          <div class="spinner-border " style="width: 3em; height: 3em;margin: 200px" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngSwitchCase="DataStateEnum.ERROR">
+        <div class="alert alert-danger" role="alert">
+          {{result.errMessage}}
+        </div>
+      </ng-container>
+      <ng-container *ngSwitchCase="DataStateEnum.LOADED">
+        <div class="check-area" [style.max-height.px]="300" style="overflow-y: auto;">
+          <div class="form-group" *ngFor="let experience of result.data">
+            <input type="checkbox"  name="lang" id="lang{{experience.idExperience}}"><label for="lang{{experience.idExperience}}">{{ experience.name }}</label>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
   </div>
 </div>
 <div class="widget-1 widget-check">
   <div class="widget-1-body">
-    <app-genre-section></app-genre-section>
+    <h6 class="subtitle">genre</h6>
+    <ng-container *ngIf="(typeInput$ | async) as result ;else elseBlock" [ngSwitch]="result.dataState">
+      <ng-container *ngSwitchCase="DataStateEnum.LOADING">
+        <div class="d-flex justify-content-center">
+          <div class="spinner-border " style="width: 3em; height: 3em;margin: 200px" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngSwitchCase="DataStateEnum.ERROR">
+        <div class="alert alert-danger" role="alert">
+          {{result.errMessage}}
+        </div>
+      </ng-container>
+      <ng-container *ngSwitchCase="DataStateEnum.LOADED">
+        <div class="check-area" [style.max-height.px]="300" style="overflow-y: auto;">
+          <div class="form-group" *ngFor="let type of result.data">
+            <input type="checkbox"  name="lang" id="lang{{type.idType}}"><label for="lang{{type.idType}}">{{ type.name }}</label>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+
   </div>
 </div>
