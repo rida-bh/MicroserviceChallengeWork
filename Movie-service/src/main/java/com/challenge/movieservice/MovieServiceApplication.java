@@ -5,11 +5,12 @@ import com.challenge.movieservice.repository.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
 import java.util.Date;
 import java.util.stream.Stream;
-
+@EnableFeignClients
 @SpringBootApplication
 public class MovieServiceApplication {
 
@@ -20,7 +21,7 @@ public class MovieServiceApplication {
 	CommandLineRunner Start(MovieRepository movieRepository,
 							LanguageRepository languageRepository,
 							ExperienceRepository experienceRepository,
-							TypeRepository typeRepository,
+							TypeRepository typeRepository
 							){
 
 		return args -> {

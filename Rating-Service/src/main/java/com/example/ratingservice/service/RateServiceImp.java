@@ -26,4 +26,9 @@ public class RateServiceImp implements RateService{
         rating1.setRatingValue(rating.getRatingValue());
         rateRepository.save(rating1);
     }
+
+    @Override
+    public float getAverageRateMovie(Long id) {
+        return  rateRepository.getAverageRateMovie(id);
+    }
 }

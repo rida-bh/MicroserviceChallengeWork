@@ -21,7 +21,6 @@ public class Movie {
     private int durationInMin;
     private Date releaseDate;
     private String country;
-    private float ratingValue;
     @ManyToOne
     private Experience experience;
     @ManyToOne

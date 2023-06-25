@@ -26,4 +26,8 @@ public class RatingController {
     private void Rate(@RequestBody Rating rating,@RequestParam("id") Long id){
         rateService.updateRating(id,rating);
     }
+    @GetMapping ("/movie-rate")
+    private float getRateOfMovie(@RequestParam("id") Long id){
+        return rateService.getAverageRateMovie(id);
+    }
 }

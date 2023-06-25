@@ -21,4 +21,5 @@ public class MovieDTO {
     private ExperienceDTO experience;
     private LanguageDTO language;
     private TypeDTO type;
+    private float ratingValue;
 }
