@@ -8,5 +8,7 @@ public interface RecommendationService {
     List<Recommendation> getRecommendations();
     void addRecommendation(Recommendation recommendation);
     void updateRecommendation(Long id,Recommendation recommendation);
-    float getScoreMovie(Long id);
+    Float getScoreMovie(Long id);
+
+    double CalculateScoreOfMovie(Float rateScoreAverage, Integer numberLikedMovie, Integer TotalLiked);
 }

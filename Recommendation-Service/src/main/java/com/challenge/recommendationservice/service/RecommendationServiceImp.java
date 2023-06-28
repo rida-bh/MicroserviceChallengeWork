@@ -28,7 +28,16 @@ public class RecommendationServiceImp implements RecommendationService {
     }
 
     @Override
-    public float getScoreMovie(Long id) {
+    public Float getScoreMovie(Long id) {
         return  recommendationRepository.getAverageRateMovie(id);
+    }
+    @Override
+    public Float CalculateScoreOfMovie(Float rateScoreAverage, Float PropotionLikedMovie) {
+        return (float) (rateScoreAverage / 5)*0.5 + PropotionLikedMovie *0.5  ;
+    }
+    @Override
+    public void addScoreRecommendation() {
+
+        recommendationRepository.save();
     }
 }

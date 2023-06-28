@@ -28,7 +28,7 @@ public class RateServiceImp implements RateService{
     }
 
     @Override
-    public float getAverageRateMovie(Long id) {
+    public Float getAverageRateMovie(Long id) {
         return  rateRepository.getAverageRateMovie(id);
     }
 }

@@ -12,4 +12,6 @@ import java.util.List;
 public interface MovieMapper {
     public MovieDTO fromMovie(Movie movie);
     public List<MovieDTO> getMoviesPages(Page<Movie> movies);
+
+    List<MovieDTO> fromMoviesToMoviesDto(List<Movie> all);
 }

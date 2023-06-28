@@ -7,6 +7,8 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @CrossOrigin("*")
 @RestController
 @AllArgsConstructor
@@ -19,8 +21,13 @@ public class MovieRestController {
                                    @RequestParam(name = "size", defaultValue = "9") int size) {
         return movieService.ShowMovies(page, size);
     }
+    @GetMapping("/all-movies")
+    public List<MovieDTO> ShowMoviesWithoutPageable() {
+        return movieService.ShowMoviesWithoutPageable();
+    }
     @GetMapping("/movie/{id}")
     public MovieDTO getMovie(@PathVariable Long id) {
         return movieService.getMovie(id);
     }
+
 }

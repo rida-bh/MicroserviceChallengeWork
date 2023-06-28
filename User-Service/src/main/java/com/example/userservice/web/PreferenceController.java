@@ -26,4 +26,8 @@ public class PreferenceController {
     private void Preference(@RequestParam("id") Long id){
         preferenceService.deletePreference(id);
     }
+    @GetMapping("/propotion-liked-movie")
+    public Float getPortionLikedMovie(@RequestParam("id") Long id) {
+        return preferenceService.getPortionLikedMovie(id);
+    }
 }

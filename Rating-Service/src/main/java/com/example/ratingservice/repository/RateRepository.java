@@ -7,5 +7,5 @@ import org.springframework.data.repository.query.Param;
 
 public interface RateRepository extends JpaRepository<Rating,Long> {
     @Query("SELECT AVG(r.ratingValue) FROM Rating r WHERE r.idMovie = :idMovie")
-    float getAverageRateMovie(@Param("idMovie") Long idMovie);
+    Float getAverageRateMovie(@Param("idMovie") Long idMovie);
 }

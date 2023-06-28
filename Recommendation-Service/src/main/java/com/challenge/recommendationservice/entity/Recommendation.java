@@ -15,6 +15,6 @@ import lombok.NoArgsConstructor;
 public class Recommendation {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idRecommendation;
-    private float score;
+    private float score ;
     private Long idMovie;
 }

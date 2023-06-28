@@ -9,4 +9,5 @@ public interface PreferenceService {
     List<Preference> getPreferences();
     void addPreference(Preference preference);
     void deletePreference(Long id);
+    Float getPortionLikedMovie(Long id);
 }

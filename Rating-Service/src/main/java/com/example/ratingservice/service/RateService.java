@@ -8,5 +8,5 @@ public interface RateService {
     List<Rating> getRates();
     void addRating(Rating rating);
     void updateRating(Long id,Rating rating);
-    float getAverageRateMovie(Long id);
+    Float getAverageRateMovie(Long id);
 }

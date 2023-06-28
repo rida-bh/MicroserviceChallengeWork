@@ -25,4 +25,18 @@ public class PreferenceServiceImp implements PreferenceService {
     public void deletePreference(Long id) {
         preferenceRepository.deleteById(id);
     }
+
+    @Override
+    public Float getPortionLikedMovie(Long id) {
+        long totalPreferences = preferenceRepository.count();
+        if (totalPreferences == 0) {
+            return 0.0f; // Return 0 if there are no preferences
+        }
+
+        long likedPreferences = preferenceRepository.countByIdMovie(id);
+        return (float) likedPreferences / totalPreferences;
+    }
+
+
+
 }

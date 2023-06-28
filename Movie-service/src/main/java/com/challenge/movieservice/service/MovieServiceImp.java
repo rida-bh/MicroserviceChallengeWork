@@ -41,4 +41,9 @@ public class MovieServiceImp implements MovieService{
         return movieDTO;
     }
 
+    @Override
+    public List<MovieDTO> ShowMoviesWithoutPageable() {
+        return movieMapper.fromMoviesToMoviesDto(movieRepository.findAll());
+    }
+
 }
