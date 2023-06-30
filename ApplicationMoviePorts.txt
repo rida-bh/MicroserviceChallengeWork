@@ -1,0 +1,7 @@
+Application						Status
+API-GATEWAY					api-gateway:8765
+MOVIE-SERVICE					Movie-service:8100
+NAMING-SERVICE				Naming-service:8761
+PREFERENCES-SERVICE			preferences-service:8400
+RATE-SERVICE					Rate-service:8200
+RECOMMENDATION-SERVICE	Recommendation-service:8300
