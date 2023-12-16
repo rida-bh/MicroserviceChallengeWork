@@ -1,6 +1,7 @@
 # Challenge requirement
 
-![Project Image](https://editor.analyticsvidhya.com/uploads/76889recommender-system-for-movie-recommendation.jpg)
+![image](https://github.com/rida-bh/MicroserviceChallengeWork/assets/65862825/69fce33a-54f5-45bf-9343-8eaf3938843b)
+
 
 > Building a Movie Recommendation System using Microservices.
 
